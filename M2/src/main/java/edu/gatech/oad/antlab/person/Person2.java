@@ -1,4 +1,6 @@
 package edu.gatech.oad.antlab.person;
+import java.util.List;
+import java.util.ArrayList;
 
 /**
  *  A simple class for person 2
@@ -30,8 +32,17 @@ public class Person2 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 2 put your implementation here
-	  return null;
+		//Person 2 put your implementation here
+		List<Character> characters = new ArrayList<Character>();
+		for (char c: input.toCharArray()) {
+			characters.add(c);
+		}
+		StringBuilder result = new StringBuilder(input.length());
+		while (characters.size() != 0) {
+			int random = (int) (Math.random() * characters.size());
+			result.append(characters.remove(random));
+		}
+		return result.toString();
 	}
 	/**
 	 * Return a string rep of this object
