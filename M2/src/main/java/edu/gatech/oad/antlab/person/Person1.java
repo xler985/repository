@@ -31,9 +31,9 @@ public class Person1 {
 	 */
 	private String calc(String input) {
 	  //Person 1 put your implementation here
-	  private String newString = "";
-	  if (input.length >= 3) {
-	  	newString = input.substring(2, input.length - 1) + input.substring(0, 1);
+	  String newString = "";
+	  if (input.length() >= 3) {
+	  	newString = input.substring(2, input.length() - 1) + input.substring(0, 1);
 	  } else {
 	  	newString = input;
 	  }
